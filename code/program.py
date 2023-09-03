@@ -94,12 +94,6 @@ class MesonBuildGUI:
         # Command Queue
         self.command_queue = queue.Queue()
 
-        # Add a progress bar
-        self.progress_bar = ttk.Progressbar(root, mode='indeterminate')
-        self.progress_bar.grid(row=2, column=0, columnspan=2,
-                               padx=5, pady=5, sticky="nsew")
-        self.progress_bar.grid_remove()  # Initially, hide the progress bar
-
     def update_console(self, text, tag=None):
         self.console.insert(tk.END, text, tag)
         self.console.see(tk.END)
@@ -136,22 +130,6 @@ class MesonBuildGUI:
         project_path = self.path_entry.get()
         command = f"ninja -C {project_path}/builddir"
         self.execute_command(command)
-
-    # Update the progress bar
-    def update_progress(self):
-        while True:
-            try:
-                tag, line = self.command_queue.get(timeout=0.1)
-                self.update_console(line, tag)
-                self.root.update()
-            except queue.Empty:
-                if not threading.active_count() > 1:
-                    break
-
-    def start_progress_thread(self):
-        progress_thread = threading.Thread(target=self.update_progress)
-        progress_thread.daemon = True
-        progress_thread.start()
 
     def initialize_project(self):
         project_path = self.path_entry.get()
