@@ -1,6 +1,6 @@
-# Project Template Readme
+# Meson-UI
 
-Welcome to the **Project Template** repository! This README file provides detailed instructions for users on Windows, macOS, and Linux systems to set up, compile, test, and run a Python project named `prog.py`. This project is licensed under the Apache License 2.0 and is maintained by `dreamer-coding-555`. It requires Python 3.8 and newer.
+Meson-UI is an open source build GUI meant to be both extremely fast, and, even more importantly, as user friendly as possible. The main design point of Meson-UI is to provide a standalone portable build GUI and allow the user to access all or most of Meson build systems features.
 
 ## Intended Audience
 
@@ -16,22 +16,22 @@ Before you proceed, ensure you have the following prerequisites installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/dreamer-coding-555/python-project-template.git
-   cd python-project-template
+   git clone https://github.com/dreamer-coding-555/meson-ui.git
+   cd meson-ui
    ```
 
 2. **Run the Project**:
    ```bash
-   python prog.py
+   python meson-ui.py
    ```
 
 ## Contributing
 
-If you're interested in contributing to this project, please consider opening pull requests or raising issues on the [GitHub repository](https://github.com/dreamer-coding-555/python-project-template).
+If you're interested in contributing to this project, please consider opening pull requests or raising issues on the [GitHub repository](https://github.com/dreamer-coding-555/meson-ui).
 
 ## Feedback and Support
 
-If you come across any issues, have questions, or would like to provide feedback, feel free to open an issue on the [GitHub repository](https://github.com/dreamer-coding-555/python-project-template/issues).
+If you come across any issues, have questions, or would like to provide feedback, feel free to open an issue on the [GitHub repository](https://github.com/dreamer-coding-555/meson-ui/issues).
 
 ## License
 
