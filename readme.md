@@ -2,10 +2,6 @@
 
 Meson-UI is an open source build GUI meant to be both extremely fast, and, even more importantly, as user friendly as possible. The main design point of Meson-UI is to provide a standalone portable build GUI and allow the user to access all or most of Meson build systems features.
 
-## Intended Audience
-
-This guide is aimed at developers of all levels who wish to utilize this Python project template. It assumes a basic familiarity with command-line interfaces and Python programming.
-
 ## Prerequisites
 
 Before you proceed, ensure you have the following prerequisites installed:
