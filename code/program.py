@@ -4,7 +4,6 @@
 # author: Michael Gene Brockus (Dreamer)
 # Gmail: <mail: michaelbrockus@gmail.com>
 #
-from tkinter import ttk
 from tkinter import filedialog
 import tkinter as tk
 import subprocess
