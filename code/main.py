@@ -4,7 +4,11 @@
 # author: Michael Gene Brockus (Dreamer)
 # Gmail: <mail: michaelbrockus@gmail.com>
 #
-from .program import greet
+from .program import MesonBuildGUI
+import tkinter as tk
 
 def main_prog():
-    print(greet())
+    root = tk.Tk()
+    app = MesonBuildGUI(root)
+    app.start_progress_thread()
+    root.mainloop()
