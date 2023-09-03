@@ -1,0 +1,44 @@
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Translations
+*.mo
+*.pot
+
+# Environments
+.env
+.eggs
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+.mypy_cache/
+.pytest_cache/
+/.project
+/.pydevproject
+/.settings
+/.cproject
+/.idea
+/.vscode
+
+__pycache__
+.coverage
+/install dir
+/work area
+
+.DS_Store
+*~
+*.swp
+packagecache
+/MANIFEST
+/build
+/dist
+/prog.egg-info
+
+*.pyc

@@ -1,0 +1,311 @@
+#
+# under: DevOps:
+# author: Michael Gene Brockus (Dreamer)
+# gmail: <michaelbrockus@gmail.com>
+#
+name: Host System CI
+
+#
+# We have is configured so that ci_runner_linux only runs
+# when source files, build scripts and this CI files is
+# changed, we should not just run CI for all changes.
+#
+on:
+  push:
+    paths:
+      - "**.py"
+      - "**.txt"
+  pull_request:
+    branches:
+      - "main"
+      - "next"
+    paths:
+      - "**.py"
+      - "**.txt"
+
+permissions:
+  contents: read
+
+#
+# Full-on DevOps pipline for testing on mock host systems
+# from Windwos, Max OS, and Linux systems.
+# 
+jobs:
+  #
+  # Mac OSX latest host system target
+  #
+  host_macosx_latest:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Mac OSX 11 host system target
+  #
+  host_macosx_11:
+    runs-on: macos-11
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Mac OSX 12 host system target
+  #
+  host_macosx_12:
+    runs-on: macos-12
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Mac OSX 12 host system target
+  #
+  host_macosx_13:
+    runs-on: macos-13
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Windows latest host system target
+  #
+  host_windows_latest:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Windows 2022 host system target
+  #
+  host_windows_2022:
+    runs-on: windows-2022
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Windows MinGW32 host system target
+  #
+  host_windows_mingw32:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Setup MinGW 32
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: mingw32
+        update: true
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Windows MinGW64 host system target
+  #
+  host_windows_mingw64:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Setup MinGW 64
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: mingw64
+        update: true
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Windows MSYS host system target
+  #
+  host_windows_msys:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Setup MSYS
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MSYS
+        update: true
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Ubuntu host latest host system target
+  #
+  host_ubuntu_latest:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Ubuntu host 22.04 host system target
+  #
+  host_ubuntu_22_04:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
+
+  #
+  # Ubuntu host 20.04 host system target
+  #
+  host_ubuntu_20_04:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        architecture: x64
+    - name: Pip Install Needed Packages
+      run: |
+          python -m pip install -r requirements.txt
+    - name: Scan File Format
+      run: |
+           flake8 .
+    - name: Test Project Code
+      run: |
+           python -m pytest test/run_tests.py
