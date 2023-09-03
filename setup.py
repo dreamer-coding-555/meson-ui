@@ -9,13 +9,13 @@ from setuptools import setup
 
 if __name__ == '__main__':
     setup(
-        name='prog',
+        name='meson-ui',
         version='0.1.0',
         author='Michael Gene Brockus (Dreamer)',
         author_email='michaelbrockus@gmail.com',
         license='Apache 2.0',
         zip_safe=True,
-        url='https://github.com/dreamer-coding-555/pypi_program_py',
+        url='https://github.com/dreamer-coding-555/meson-ui',
         packages=[
             'code'
         ],
