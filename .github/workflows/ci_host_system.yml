@@ -37,7 +37,7 @@ jobs:
   host_macosx_latest:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -59,7 +59,7 @@ jobs:
   host_macosx_11:
     runs-on: macos-11
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -81,7 +81,7 @@ jobs:
   host_macosx_12:
     runs-on: macos-12
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -103,7 +103,7 @@ jobs:
   host_macosx_13:
     runs-on: macos-13
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -125,7 +125,7 @@ jobs:
   host_windows_latest:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -147,7 +147,7 @@ jobs:
   host_windows_2022:
     runs-on: windows-2022
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -169,7 +169,7 @@ jobs:
   host_windows_mingw32:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -196,7 +196,7 @@ jobs:
   host_windows_mingw64:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -223,7 +223,7 @@ jobs:
   host_windows_msys:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -250,7 +250,7 @@ jobs:
   host_ubuntu_latest:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -272,7 +272,7 @@ jobs:
   host_ubuntu_22_04:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -294,7 +294,7 @@ jobs:
   host_ubuntu_20_04:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
