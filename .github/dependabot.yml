@@ -1,0 +1,12 @@
+# Dependabot configuration file for GitHub Actions dependencies
+version: 2
+
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      # Update dependencies weekly
+      interval: "weekly"
+      # Set update time to early morning
+      time: "05:55"
