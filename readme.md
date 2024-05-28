@@ -5,19 +5,6 @@
 * Meson-ui® is a build GUI for Meson build system a next-generation build system.
 ----------------------------------------
 
-## Quality status
-#### CI/CD Pipeline:
-
-[![PyPI](https://img.shields.io/pypi/v/meson-ui.svg)](https://pypi.python.org/pypi/meson-ui)
-[![GitHub](https://img.shields.io/github/license/michaelbadcrumble/meson-ui.svg?color=blue)](https://github.com/michaelbadcrumble/meson-ui)
-[![CircleCI](https://circleci.com/gh/michaelbadcrumble/meson-ui.svg?style=shield)](https://circleci.com/gh/michaelbadcrumble/meson-ui)
-![MacOS System](https://github.com/michaelbadcrumble/meson-ui/workflows/MacOS%20System/badge.svg?branch=master)
-![Windows system](https://github.com/michaelbadcrumble/meson-ui/workflows/Windows%20system/badge.svg?branch=master)
-![LintMypy](https://github.com/michaelbadcrumble/meson-ui/workflows/LintMypy/badge.svg?branch=master)
-[![Codecov](https://codecov.io/gh/michaelbadcrumble/meson-ui/coverage.svg?branch=master)](https://codecov.io/gh/michaelbadcrumble/meson-ui/branch/master)
-[![Code Quality: Python](https://img.shields.io/lgtm/grade/python/g/michaelbadcrumble/meson-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/michaelbadcrumble/meson-ui/context:python)
-[![Total Alerts](https://img.shields.io/lgtm/alerts/g/michaelbadcrumble/meson-ui.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/michaelbadcrumble/meson-ui/alerts)
-
 ## Overview
 
 Meson-UI is an open source build GUI meant to be both extremely fast,
@@ -93,7 +80,7 @@ meson-ui
 
 ## Development
 
-All development on Meson-ui is done on the [GitHub project](https://github.com/michaelbadcrumble/meson-ui). 
+All development on Meson-ui is done on the [GitHub project](https://github.com/dreamer-coding-555/meson-ui). 
 Instructions for contributing can be found on the [contribution page](contributing.md).
 
 You do not need to sign a CLA to contribute to Meson-ui.
@@ -103,9 +90,6 @@ You do not need to sign a CLA to contribute to Meson-ui.
 
 #### Developer and creator of Meson-UI
 
-* reddit: [https://www.reddit.com/user/MichaelBrockus](https://www.reddit.com/user/MichaelBrockus)
-* outlook: [michaelbrockus@outlook.com](mailto:michaelbrockus@outlook.com)
-* icloud: [michaelbrockus@icloud.com](mailto:michaelbrockus@icloud.com)
 * gmail: [michaelbrockus@gmail.com](mailto:michaelbrockus@gmail.com)
 
 ***Happy planing. Happy coding...***
