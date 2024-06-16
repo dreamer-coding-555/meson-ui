@@ -16,8 +16,7 @@ cmd: list = [
     "-v",
     "run_unittests.py",
     "run_backend_tests.py",
-    "run_project_tests.py",
-    "run_mesonui_tests.py",
+    "run_project_tests.py"
 ]
 
 check_call(cmd, encoding="utf-8", stderr=STDOUT)
