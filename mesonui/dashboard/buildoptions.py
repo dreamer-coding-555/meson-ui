@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 #
-# author : Michael Brockus.  
-# contact: <mailto:michaelbrockus@gmail.com>
-# license: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0
+# author : Michael Brockus.
+# contact: <mailto:michaelbrockus@gmail.com>
+# license: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0
 #
 # copyright 2020 The Meson-UI development team
 #
@@ -18,7 +18,7 @@ class IntroBuildOptionsTab:
 
     def setup_introspection(self):
         head_ref = self._context._model.model_options().get_list().head
-        while (head_ref is not None):
+        while head_ref is not None:
             new_item = QListWidgetItem(head_ref.data)
             self._context.buildoptions_list.addItem(new_item)
             head_ref = head_ref.next
@@ -30,11 +30,11 @@ class IntroBuildOptionsTab:
 
         head_ref = self._context._model.model_options().get_list().head
         if head_ref is None:
-            new_item = QListWidgetItem(f'No Project data.')
+            new_item = QListWidgetItem("No Project data.")
             self._context.buildoptions_list.addItem(new_item)
             return
 
-        while (head_ref is not None):
+        while head_ref is not None:
             new_item = QListWidgetItem(head_ref.data)
             self._context.buildoptions_list.addItem(new_item)
             head_ref = head_ref.next

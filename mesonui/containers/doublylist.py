@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
+
 #
-# author : Michael Brockus.  
-# contact: <mailto:michaelbrockus@gmail.com>
-# license: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0
+# author : Michael Brockus.
+# contact: <mailto:michaelbrockus@gmail.com>
+# license: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0
 #
 # copyright 2020 The Meson-UI development team
 #
 class MesonUiNode:
-    def __init__(self, data_ptr = None, next_ptr = None, prev_ptr = None):
+    def __init__(self, data_ptr=None, next_ptr=None, prev_ptr=None):
         self.data = data_ptr
         self.next = next_ptr
         self.prev = prev_ptr
@@ -38,7 +39,7 @@ class MesonUiDLL:
         if self.is_empty():
             return
         else:
-            if(self.head != self.tail):
+            if self.head != self.tail:
                 self.head = self.head.next
                 self.head.previous = None
             else:
