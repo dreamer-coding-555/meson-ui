@@ -8,7 +8,6 @@
 # copyright 2020 The Meson-UI development team
 #
 """A library of random helper functionality."""
-from distutils.spawn import find_executable
 from pathlib import Path
 import subprocess
 import functools
@@ -22,12 +21,12 @@ import re
 import typing as T
 
 
-def find_executables(file_names):
+def find_executables(file_names: T.List[str]) -> str:
     for file_name in file_names:
-        res = find_executable(file_name)
-        if res:
+        res = shutil.which(file_name)
+        if res is not None:
             return res
-    raise RuntimeError(f'Executables "{file_names}" not found in path.')
+    raise RuntimeError(f'Executable(s) "{", ".join(file_names)}" not found in path.')
 
 
 '''
