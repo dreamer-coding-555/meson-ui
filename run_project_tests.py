@@ -49,7 +49,7 @@ class TestPyPiPackageInfo:
         assert pypi.get_mail() == "michaelbrockus@gmail.com"
         assert pypi.get_license() == "Apache-2.0"
         assert pypi.get_project_name() == "meson-ui"
-        assert pypi.get_version() == "0.20.1"
+        assert pypi.get_version() == "0.20.2"
         assert pypi.get_description() == info
 
     def test_only_author_info(self):
@@ -61,7 +61,7 @@ class TestPyPiPackageInfo:
         pypi = ProjectInfo()
         assert pypi.get_license() == "Apache-2.0"
         assert pypi.get_project_name() == "meson-ui"
-        assert pypi.get_version() == "0.20.1"
+        assert pypi.get_version() == "0.20.2"
         assert pypi.get_description() == info
 
 

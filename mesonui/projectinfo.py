@@ -23,7 +23,7 @@ class ProjectInfo:
         return info
 
     def get_version(self) -> str:
-        return '0.20.1'
+        return '0.20.2'
 
     def get_license(self) -> str:
         return 'Apache-2.0'
