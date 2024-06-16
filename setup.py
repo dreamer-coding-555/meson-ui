@@ -7,11 +7,14 @@
 #
 # copyright 2020 The Meson-UI development team
 #
-from setuptools import setup
+from setuptools import setup, find_packages
 from mesonui.packageinfo import PackageInfo as PyPiPackage
 
-pypi_pkg: PyPiPackage = PyPiPackage()
-
+try:
+    pypi_pkg: PyPiPackage = PyPiPackage()
+except Exception as e:
+    print(f"Error: Failed to retrieve package information - {e}")
+    raise
 
 setup(
     author=pypi_pkg.get_name(),
@@ -21,8 +24,7 @@ setup(
     long_description=pypi_pkg.long_description(),
     version=pypi_pkg.get_version(),
     license=pypi_pkg.get_license(),
-    packages=pypi_pkg.get_packages(),
-    data_files=pypi_pkg.get_data_files(),
+    packages=find_packages(),
     entry_points={
         'console_scripts': ['meson-ui=mesonui.mesonuimain:mesonui_main'],
     },
