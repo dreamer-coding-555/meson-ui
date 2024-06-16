@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 #
-# author : Michael Brockus.  
-# contact: <mailto:michaelbrockus@gmail.com>
-# license: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0
+# author : Michael Brockus.
+# contact: <mailto:michaelbrockus@gmail.com>
+# license: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0
 #
 # copyright 2020 The Meson-UI development team
 #
@@ -34,10 +34,10 @@ class TestMainActivity:
         qtbot.keyClicks(activity.project_sourcedir, str(tmpdir))
 
         activity.project_builddir.clear()
-        qtbot.keyClicks(activity.project_builddir, str((tmpdir / 'builddir')))
+        qtbot.keyClicks(activity.project_builddir, str((tmpdir / "builddir")))
 
         assert activity.project_sourcedir.text() == str(tmpdir)
-        assert activity.project_builddir.text() == str(tmpdir / 'builddir')
+        assert activity.project_builddir.text() == str(tmpdir / "builddir")
 
     def test_enter_clear(self, qtbot, tmpdir):
         activity = MainActivity(MainModel())
@@ -47,15 +47,15 @@ class TestMainActivity:
         qtbot.keyClicks(activity.project_sourcedir, str(tmpdir))
 
         activity.project_builddir.clear()
-        qtbot.keyClicks(activity.project_builddir, str((tmpdir / 'builddir')))
+        qtbot.keyClicks(activity.project_builddir, str((tmpdir / "builddir")))
 
         assert activity.project_sourcedir.text() == str(tmpdir)
-        assert activity.project_builddir.text() == str(tmpdir / 'builddir')
+        assert activity.project_builddir.text() == str(tmpdir / "builddir")
 
         qtbot.mouseClick(activity.control_push_clear_sourcedir, Qt.LeftButton)
 
-        assert activity.project_sourcedir.text() == ''
-        assert activity.project_builddir.text() == ''
+        assert activity.project_sourcedir.text() == ""
+        assert activity.project_builddir.text() == ""
 
 
 class TestSetupActivity:
@@ -72,10 +72,12 @@ class TestSetupActivity:
 
         model = MainModel()
         model.buildsystem().meson().sourcedir = tmpdir
-        model.buildsystem().meson().builddir = (tmpdir / 'builddir')
+        model.buildsystem().meson().builddir = tmpdir / "builddir"
         model.buildsystem().meson().init()
 
-        setup_view: SetupActivity = SetupActivity(OutputConsole(MainActivity(model)), model)
+        setup_view: SetupActivity = SetupActivity(
+            OutputConsole(MainActivity(model)), model
+        )
         qtbot.addWidget(setup_view)
 
         qtbot.mouseClick(setup_view.control_push_do_setup, Qt.LeftButton)
@@ -84,9 +86,9 @@ class TestSetupActivity:
 
         #
         # Run asserts to check it is working
-        assert tmpdir.join('meson.build').ensure()
-        assert tmpdir.join('builddir', 'build.ninja').ensure()
-        assert tmpdir.join('builddir', 'compile_commands.json').ensure()
+        assert tmpdir.join("meson.build").ensure()
+        assert tmpdir.join("builddir", "build.ninja").ensure()
+        assert tmpdir.join("builddir", "compile_commands.json").ensure()
 
     def test_no_setup_prog(self, qtbot):
         setup_view: SetupActivity = SetupActivity(None, MainModel())
@@ -109,19 +111,21 @@ class TestConfigureActivity:
 
         model = MainModel()
         model.buildsystem().meson().sourcedir = tmpdir
-        model.buildsystem().meson().builddir = (tmpdir / 'builddir')
+        model.buildsystem().meson().builddir = tmpdir / "builddir"
         model.buildsystem().meson().init()
 
-        setup_view: ConfigureActivity = ConfigureActivity(OutputConsole(MainActivity(MainModel())), model)
+        setup_view: ConfigureActivity = ConfigureActivity(
+            OutputConsole(MainActivity(MainModel())), model
+        )
         qtbot.addWidget(setup_view)
 
         qtbot.mouseClick(setup_view.control_push_do_setup, Qt.LeftButton)
 
         #
         # Run asserts to check it is working
-        assert tmpdir.join('meson.build').ensure()
-        assert tmpdir.join('builddir', 'build.ninja').ensure()
-        assert tmpdir.join('builddir', 'compile_commands.json').ensure()
+        assert tmpdir.join("meson.build").ensure()
+        assert tmpdir.join("builddir", "build.ninja").ensure()
+        assert tmpdir.join("builddir", "compile_commands.json").ensure()
 
     def test_no_setup_prog(self, qtbot):
         setup_view: ConfigureActivity = ConfigureActivity(None, MainModel())
