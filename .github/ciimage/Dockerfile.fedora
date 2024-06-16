@@ -1,0 +1,26 @@
+# Use Fedora as the base image
+FROM fedora:latest
+
+# Update packages and install system dependencies
+RUN dnf -y update && \
+    dnf -y install \
+        git \
+        glibc-devel \
+        gcc \
+        gcc-c++
+
+# Install Python 3 and pip
+RUN dnf -y install python3 python3-pip python3-wheel python3-setuptools
+
+# Upgrade pip
+RUN pip3 -q install --upgrade pip
+
+# Install Python dependencies
+RUN pip3 install \
+    meson==1.4.0 \
+    cmake==3.16.3 \
+    ninja==1.9.0 \
+    pytest==5.3.2 \
+    pytest-cov==2.8.1 \
+    codecov==2.0.15 \
+    PyQt5==5.14.1
