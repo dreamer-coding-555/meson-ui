@@ -1,0 +1,8 @@
+meson
+ninja
+PyQt5
+pytest
+pytest-cov
+pytest-qt
+pytest-xdist
+codecov
