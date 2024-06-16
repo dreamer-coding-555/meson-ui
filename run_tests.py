@@ -21,4 +21,4 @@ cmd: list = [
     "run_mesonui_tests.py",
 ]
 
-check_call(cmd, encoding="utf8", stderr=STDOUT)
+check_call(cmd, encoding="utf-8", stderr=STDOUT)
