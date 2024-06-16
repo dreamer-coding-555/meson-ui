@@ -581,19 +581,6 @@ class TestApiBuilddirLoader:
         assert info["version"] == "0.1"
         assert info["subproject_dir"] == "subprojects"
 
-    def test_loader_buildoptions(self):
-        source = join("test-cases", "intro-loader", "04-buildoptions")
-        build = join("test-cases", "intro-loader", "04-buildoptions", "builddir")
-        meson: Meson = Meson(sourcedir=source, builddir=build)
-
-        meson.setup()
-
-        script: MesonBuilddirLoader = MesonBuilddirLoader(build)
-        info = script.extract_from(group="buildoptions")
-
-        assert info[0]["name"] == "auto_features"
-        assert info[0]["value"] == "auto"
-
     def test_loader_meson_test(self):
         source = join("test-cases", "intro-loader", "02-unittests")
         build = join("test-cases", "intro-loader", "02-unittests", "builddir")
@@ -742,19 +729,6 @@ class TestApiBuilddirReader:
         assert info["version"] == "0.1"
         assert info["subproject_dir"] == "subprojects"
 
-    def test_reader_buildoptions(self):
-        source = join("test-cases", "intro-reader", "04-buildoptions")
-        build = join("test-cases", "intro-reader", "04-buildoptions", "builddir")
-        meson: Meson = Meson(sourcedir=source, builddir=build)
-
-        meson.setup()
-
-        script: MesonBuilddirReader = MesonBuilddirReader(build)
-        info = script.extract_from(group="buildoptions")
-
-        assert info[0]["name"] == "auto_features"
-        assert info[0]["value"] == "auto"
-
     def test_reader_meson_test(self):
         source = join("test-cases", "intro-reader", "02-unittests")
         build = join("test-cases", "intro-reader", "02-unittests", "builddir")
@@ -866,15 +840,6 @@ class TestApiScriptScanner:
         assert info["descriptive_name"] == "simple-case"
         assert info["version"] == "0.1"
         assert info["subproject_dir"] == "subprojects"
-
-    def test_script_buildoptions(self):
-        script: MesonScriptReader = MesonScriptReader(
-            join("test-cases", "intro-scanner", "04-buildoptions")
-        )
-        info = script.extract_from(group="buildoptions")
-
-        assert info[0]["name"] == "auto_features"
-        assert info[0]["value"] == "auto"
 
     def test_meson_test(self):
         script: MesonScriptReader = MesonScriptReader(

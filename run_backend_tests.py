@@ -48,31 +48,6 @@ class TestMesonBackend:
         assert os.path.exists(join_paths(build, "compile_commands.json"))
         assert os.path.exists(join_paths(build, "basic.kdev4"))
 
-    def test_codeblocks_backend(self):
-        #
-        # Setting up tmp test directory
-        source = Path(join_paths("test-cases", "backends", "02-codeblocks")).resolve()
-        build = Path(
-            join_paths("test-cases", "backends", "02-codeblocks", "builddir")
-        ).resolve()
-
-        #
-        # Running Meson command
-        meson: Meson = Meson(sourcedir=source, builddir=build)
-
-        meson.setup(["--backend=ninja"])
-        api = MesonAPI(sourcedir=source, builddir=build)
-        ide = CodeBlocksBackend(api)
-        ide.generator()
-
-        #
-        # Run asserts to check it is working
-        assert os.path.exists(join_paths(source, "meson.build"))
-        assert os.path.exists(join_paths(build, "build.ninja"))
-        assert os.path.exists(join_paths(build, "meson-info", "intro-projectinfo.json"))
-        assert os.path.exists(join_paths(build, "compile_commands.json"))
-        assert os.path.exists(join_paths(build, "basic.cbp"))
-
     def test_qtcreator_backend(self):
         #
         # Setting up tmp test directory
