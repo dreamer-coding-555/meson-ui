@@ -10,7 +10,6 @@
 import pytest
 from mesonui.mesonuilib.utilitylib import OSUtility
 from mesonui.mesonuilib.buildsystem import Meson
-from mesonui.mesonuilib.backends.codeblocks import CodeBlocksBackend
 from mesonui.mesonuilib.backends.qtcreator import QtCreatorBackend
 from mesonui.mesonuilib.backends.kdevelop import KDevelopBackend
 from mesonui.mesonuilib.backends.gnome import GNOMEBuilderBackend
