@@ -61,8 +61,8 @@ class KDevelopBackend(BackendImplementionApi):
             file.write(f"BuildItems=@Variant({self._variant()})\n\n")
 
             file.write("[MesonManager]\n")
-            file.write(f"Current Build Directory Index=0\n")
-            file.write(f"Number of Build Directories=1\n\n")
+            file.write("Current Build Directory Index=0\n")
+            file.write("Number of Build Directories=1\n\n")
 
             file.write("[MesonManager][BuildDir 0]\n")
             file.write("Additional meson arguments=\n")
