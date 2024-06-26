@@ -1,95 +1,62 @@
-<p align="center">
-<img src="graphics/meson-ui.svg">
-</p>
+# Meson-UI: An Open-Source Build GUI
 
-* Meson-ui® is a build GUI for Meson build system a next-generation build system.
-----------------------------------------
+## Introduction
 
-## Overview
-
-Meson-UI is an open source build GUI meant to be both extremely fast,
-and, even more importantly, as user friendly as possible.
-
-The main design point of Meson-UI is to provide a standalone portable
-build GUI and allow the user to access all or most of Meson build
-systems features.
-
-
-## Preview
-
-<p align="center">
-<img src="docs/markdown/images/preview.png">
-</p>
-
+Welcome to Meson-UI, an open-source Graphical User Interface (GUI) developed by Fossil Logic. Meson-UI is designed to enhance your experience with the Meson build system. The primary goals of Meson-UI are to provide a fast, efficient, and user-friendly interface that simplifies the process of building and managing projects using Meson.
 
 ## Features
 
-*   Multiplatform support for **Linux**, **MacOS X**, **Windows 10**, and others
-*   Straight forward and easy to use graphical user interface
-*   Supported almost all of Meson build command line arguments
-*   Basic support for managing wraps from Meson-UI
-*   Available as a package on Python Package Index
-*   Available as a Snap on the linux Snap Store
-*   Optimized for extremely fast usage without sacrificing correctness
-*   Distributed under the Apache 2.0 license
-*   Works 99.95% out of the box
-*   fun!
+Meson-UI offers a variety of features to enhance your experience with the Meson build system:
 
-### Dependencies
+- **Fast Performance:** Optimized to handle large projects efficiently.
+- **User-Friendly Interface:** Intuitive design that simplifies navigation and operation.
+- **Project Management:** Easily create, configure, and manage Meson projects.
+- **Build Configuration:** Customize build options and settings with ease.
+- **Real-Time Feedback:** View build progress and output in real-time.
+- **Integration with Meson:** Seamless integration with the Meson build system for a smooth workflow.
 
------------------------------------------------------------------------------------------------------------------
-| Python Package Index.                   | Dependency Home Page                              |  Version Needed  |
-|-----------------------------------------|---------------------------------------------------|------------------|
-| [PyQt5](https://pypi.org/project/PyQt5) | [PyQt5 Project website](https://doc.qt.io/qtforpython/) | 5.14.1 or newer. |
-| [Meson](https://pypi.org/project/meson) | [Meson Build Home Page](https://mesonbuild.com/)  | 0.54.0 or newer. |
-| [Ninja](https://pypi.org/project/ninja) | [Ninja Build Home Page](https://ninja-build.org/) | 1.9.0 or newer.  |
+## Installation
 
-To simplify the dependency download process we recommend using `pip` to install everything.
+To install Meson-UI, follow these steps:
 
-If you wish you can install it locally with the standard Python command:
+### Prerequisites
 
-```console
-python3 -m pip install -r requirements.txt
-```
+Ensure you have the following prerequisites installed:
 
-If you wish to run the test point `pip` to `dev-requirements.txt` file:
+- [Python 3.6+](https://www.python.org/downloads/)
+- [Meson Build System](https://mesonbuild.com/)
+- [PyQt5](https://pypi.org/project/PyQt5/)
 
-```console
-python3 -m pip install -r dev-requirements.txt
-```
+### Steps
 
-### Downloading.
---------
+1. Clone the Meson-UI repository:
+    ```bash
+    git clone https://github.com/fossillogic/meson-ui.git
+    ```
 
-Meson-UI is available on [PyPi](https://pypi.org/project/meson-ui), so it can be
-installed with `pip3 install meson-ui`. The exact command to type to install with
-`pip` can vary between systems, be sure to use the Python 3 version of `pip`.
+2. Navigate to the project directory:
+    ```bash
+    cd meson-ui
+    ```
 
-```console
-python3 -m pip install meson-ui --user
-```
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+4. Run the application:
+    ```bash
+    python meson-ui.py
+    ```
 
-### Run Meson-ui.
+If you wanna know how to use this tool feel free to select the tutorial option in the drop
+down menu and you will be given a light overview of the capabilities.
 
-To start the app, run this command:
+## Contributing
 
-```console
-meson-ui
-```
+We welcome contributions from the community! To contribute feel free to review [the docs](https://fossillogic.com/docs/contributing/).
+Please ensure your code adheres to our coding standards and includes appropriate tests.
 
-## Development
+---
 
-All development on Meson-ui is done on the [GitHub project](https://github.com/dreamer-coding-555/meson-ui). 
-Instructions for contributing can be found on the [contribution page](contributing.md).
-
-You do not need to sign a CLA to contribute to Meson-ui.
-
-### Contact the developer.
-==========================
-
-#### Developer and creator of Meson-UI
-
-* gmail: [michaelbrockus@gmail.com](mailto:michaelbrockus@gmail.com)
-
-***Happy planing. Happy coding...***
+Thank you for using Meson-UI! We hope it enhances your experience with the Meson build system. For further assistance, please refer to our documentation or reach out to our support team. 💻
